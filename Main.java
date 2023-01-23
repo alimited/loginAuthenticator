@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
         // Read login and password information from a text file and store it in the loginMap
-        Scanner scanner = new Scanner(new FileReader("src/login_info"));
+        Scanner scanner = new Scanner(new FileReader("src/login_info.txt"));
         while (scanner.hasNextLine()) {
             String[] line = scanner.nextLine().split(":");
             String login = line[0];
@@ -24,7 +24,7 @@ public class Main {
         String login = inputScanner.nextLine();
 
         // Authenticate the first 2 letter of login
-        BufferedReader reader = new BufferedReader(new FileReader("src/login_info"));
+        BufferedReader reader = new BufferedReader(new FileReader("src/login_info.txt"));
         String read;
         while ((read = reader.readLine()) != null) {
             if (read.startsWith("sg") != login.startsWith("sg")) {
